@@ -12,7 +12,7 @@ import * as THREE from "three";
 
 // 3D Model Loader Component
 function FlowerModel(props) {
-  const { scene } = useGLTF("/flower.glb");
+  const { scene } = useGLTF(process.env.PUBLIC_URL + "/flower.glb");
 
   useEffect(() => {
     // Ensure materials are properly loaded
@@ -26,6 +26,9 @@ function FlowerModel(props) {
 
   return <primitive object={scene} {...props} />;
 }
+
+// Preload the model
+useGLTF.preload(process.env.PUBLIC_URL + "/flower.glb");
 
 function Scene() {
   const cameraRef = React.useRef();
