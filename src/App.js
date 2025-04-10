@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from "react";
+import BirthdayFlowerPot from "./Components/BirthdayFlowerPlot";
+import "./index.css"; // Ensure global Tailwind CSS is imported
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // Added flex and centering classes
+    <div className="h-screen w-screen flex items-center justify-center bg-black">
+      <BirthdayFlowerPot />
     </div>
   );
 }
-
-export default App;

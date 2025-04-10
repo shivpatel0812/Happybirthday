@@ -1,3 +1,49 @@
+# Happy Birthday 3D Flower Card
+
+An interactive 3D birthday card featuring a beautiful flower model with animations and a personalized message modal.
+
+## Features
+
+- 3D flower model with rotate functionality
+- Smooth camera animations
+- Interactive letter modal with birthday message
+- Beautiful intro animation
+- Responsive design
+
+## Technologies Used
+
+- React
+- Three.js
+- React Three Fiber
+- React Three Drei
+- Framer Motion
+
+## Setup
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/shivpatel0812/Happybirthday.git
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Run the development server
+
+```bash
+npm start
+```
+
+## Usage
+
+- Click and hold to rotate the 3D flower
+- Click the letter icon to view the birthday message
+- Enjoy the smooth animations and interactions!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
