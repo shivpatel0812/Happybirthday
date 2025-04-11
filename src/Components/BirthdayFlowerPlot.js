@@ -9,6 +9,7 @@ import {
 } from "@react-three/drei";
 import { motion, AnimatePresence } from "framer-motion";
 import * as THREE from "three";
+import Confetti from "react-confetti";
 
 // 3D Model Loader Component
 function FlowerModel(props) {
@@ -95,13 +96,21 @@ function Scene() {
 export default function BirthdayFlowerPot() {
   const [showIntro, setShowIntro] = useState(true);
   const [showLetter, setShowLetter] = useState(false);
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
   useEffect(() => {
-    // Auto transition after 2.5 seconds
-    const timer = setTimeout(() => {
-      setShowIntro(false);
-    }, 2500);
-    return () => clearTimeout(timer);
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -114,6 +123,7 @@ export default function BirthdayFlowerPot() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.2 }}
             transition={{ duration: 0.5 }}
+            onClick={() => setShowIntro(false)}
             style={{
               position: "absolute",
               top: 0,
@@ -127,36 +137,103 @@ export default function BirthdayFlowerPot() {
               background: "linear-gradient(135deg, #FF69B4, #FF1493)",
               color: "white",
               fontFamily: "Arial, sans-serif",
+              cursor: "pointer",
+              overflow: "hidden",
             }}
           >
-            <motion.h1
-              initial={{ y: 20 }}
-              animate={{ y: 0 }}
+            <Confetti
+              width={windowSize.width}
+              height={windowSize.height}
+              numberOfPieces={200}
+              recycle={true}
+              colors={[
+                "#FFB6C1",
+                "#FF69B4",
+                "#FF1493",
+                "#FFE4E1",
+                "#FFF0F5",
+                "#gold",
+              ]}
+            />
+
+            <motion.img
+              src={process.env.PUBLIC_URL + "/birthday-cake-animated.gif"}
+              alt="Birthday Cake"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                delay: 0.2,
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+              }}
               style={{
-                fontSize: "3rem",
-                marginBottom: "1rem",
-                textAlign: "center",
-                fontWeight: "bold",
-                textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+                width: "200px",
+                marginBottom: "2rem",
+                borderRadius: "15px",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
+              }}
+            />
+
+            <motion.div
+              style={{
+                background: "rgba(255,255,255,0.1)",
+                padding: "2rem 3rem",
+                borderRadius: "20px",
+                backdropFilter: "blur(10px)",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.1)",
               }}
             >
-              Happy 21st Birthday
-            </motion.h1>
-            <motion.h2
-              initial={{ y: 20 }}
-              animate={{ y: 0 }}
-              transition={{ delay: 0.2 }}
+              <motion.h1
+                initial={{ y: 20 }}
+                animate={{ y: 0 }}
+                style={{
+                  fontSize: "3.5rem",
+                  marginBottom: "1rem",
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+                  background: "linear-gradient(45deg, #fff, #FFE4E1)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Happy 21st Birthday
+              </motion.h1>
+              <motion.h2
+                initial={{ y: 20 }}
+                animate={{ y: 0 }}
+                transition={{ delay: 0.2 }}
+                style={{
+                  fontSize: "4.5rem",
+                  background: "linear-gradient(45deg, #FFE4E1, #FFF0F5)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  marginBottom: "1rem",
+                }}
+              >
+                Ananya!
+              </motion.h2>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
               style={{
-                fontSize: "4rem",
-                background: "linear-gradient(45deg, #FFE4E1, #FFF0F5)",
-                backgroundClip: "text",
-                WebkitBackgroundClip: "text",
-                color: "transparent",
-                fontWeight: "bold",
+                marginTop: "2rem",
+                fontSize: "1.2rem",
+                opacity: 0.9,
+                background: "rgba(255,255,255,0.1)",
+                padding: "0.8rem 1.5rem",
+                borderRadius: "30px",
+                backdropFilter: "blur(5px)",
               }}
             >
-              Ananya!
-            </motion.h2>
+              Tap anywhere to continue
+            </motion.div>
           </motion.div>
         ) : (
           <motion.div
@@ -173,14 +250,17 @@ export default function BirthdayFlowerPot() {
             <div
               style={{
                 position: "absolute",
-                bottom: "50px", // Moved much closer to letter icon
-                left: "50%",
-                transform: "translateX(-50%)",
-                color: "#000000",
+                bottom: "50%", // Center vertically
+                right: "20px", // Position on the right side
+                transform: "translateY(50%)", // Center vertically
+                color: "#ffffff", // Changed to white for better visibility on purple background
                 textAlign: "center",
                 fontFamily: "Arial, sans-serif",
                 userSelect: "none",
                 zIndex: 10,
+                padding: "15px",
+                background: "rgba(0,0,0,0.2)", // Semi-transparent background
+                borderRadius: "10px",
               }}
             >
               <div style={{ fontSize: "20px", marginBottom: "4px" }}>
@@ -197,11 +277,11 @@ export default function BirthdayFlowerPot() {
               onClick={() => setShowLetter(true)}
               style={{
                 position: "absolute",
-                bottom: "10px", // Moved closer to instructions
-                left: "50%",
+                bottom: "20px",
+                left: "49%",
                 transform: "translateX(-50%)",
-                width: "40px", // Made slightly smaller
-                height: "40px", // Made slightly smaller
+                width: "40px",
+                height: "40px",
                 background: "white",
                 borderRadius: "8px",
                 boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
@@ -210,7 +290,7 @@ export default function BirthdayFlowerPot() {
                 alignItems: "center",
                 justifyContent: "center",
                 zIndex: 10,
-                padding: "6px", // Adjusted padding
+                padding: "6px",
               }}
             >
               <div
@@ -335,11 +415,33 @@ export default function BirthdayFlowerPot() {
                             textShadow: "1px 1px 1px rgba(0,0,0,0.05)",
                           }}
                         >
-                          On your 21st birthday, I hope this special day brings
-                          you all the joy, laughter, and beautiful moments you
-                          deserve. May this year be filled with amazing
-                          adventures, wonderful opportunities, and countless
-                          reasons to smile.
+                          Hi Ananya. Happy 21st Birthday. I realllllllly wish I
+                          was celebrating with you and can't believe I am
+                          missing this. The last time I wrote a letter on your
+                          birthday it was for your 19th birthday and honestly
+                          then I saw you as my best friend and really saw more
+                          than that. Up to that point, I had never met someome
+                          that made my smile be so wide on my face everytime I
+                          saw you. Honeslty, I was very scared of our future
+                          then just thinking of if I would ever have to go a day
+                          where me and you are just strangers. Now I am writing
+                          this knowing you are my soul mate and the love of my
+                          life. I picture us graduating together. I picture us
+                          going on a vacation after we finish school. I picture
+                          us visiting each others work. I picture us moving in
+                          together or hopefully being very close by after we
+                          gradute. I picture us making new friends together. I
+                          picture us marrying I picture us marrying, buying our
+                          own house, going on family vacation and growing old
+                          together. I was alwasy excited about life, but never
+                          like this, knowing I will be going with it with my
+                          bestfriend, my other half to go on an adventure with.
+                          I just think of all of the fun things that we are
+                          going to do. These last 4 months have been really hard
+                          for me honestly. This is the first time I feel lonely
+                          in my life even though I am surrounded with so many
+                          people all the time. The only thing that gets me
+                          through is seeing or hearing your voice.
                         </p>
                         {/* Add more paragraphs here and they'll be scrollable */}
                       </div>
