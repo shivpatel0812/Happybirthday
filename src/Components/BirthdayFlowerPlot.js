@@ -246,6 +246,42 @@ export default function BirthdayFlowerPot() {
               <Scene />
             </Canvas>
 
+            {/* Back Button */}
+            <motion.button
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1 }}
+              onClick={() => setShowIntro(true)}
+              style={{
+                position: "absolute",
+                top: "20px",
+                left: "20px",
+                background: "rgba(255,255,255,0.9)",
+                border: "none",
+                borderRadius: "8px",
+                padding: "8px 16px",
+                fontSize: "16px",
+                color: "#FF69B4",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+                zIndex: 10,
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.05)";
+                e.currentTarget.style.background = "white";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.background = "rgba(255,255,255,0.9)";
+              }}
+            >
+              ← Back
+            </motion.button>
+
             {/* Letter Icon */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -457,7 +493,7 @@ export default function BirthdayFlowerPot() {
                           you the happiest person in the world. I love you
                           Ananya. I just really wanted you to have a letter that
                           you could keep forever and see anytime so that is why
-                          I created this website. I hope you like it
+                          I created this website. I hope you like it!
                         </p>
                         {/* Add more paragraphs here and they'll be scrollable */}
                       </div>
