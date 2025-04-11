@@ -277,7 +277,6 @@ export default function BirthdayFlowerPot() {
               ← Back
             </motion.button>
 
-            {/* Letter Icon */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -522,12 +521,13 @@ export default function BirthdayFlowerPot() {
                           that I know I should have been better. I really am
                           trying to learn and be the best possible boyfriend,
                           partner, and make you the happiest person in the
-                          world. I love you Ananya. I just really wanted you to
-                          have a letter that you could keep forever and see
+                          world. I hope you accomplish everything you want in
+                          life and in the end of it are happy and have no
+                          regrets. I love you Ananya. I just really wanted you
+                          to have a letter that you could keep forever and see
                           anytime so that is why I created this website. I hope
                           you like it!
                         </p>
-                        {/* Add more paragraphs here and they'll be scrollable */}
                       </div>
                       <p
                         style={{
