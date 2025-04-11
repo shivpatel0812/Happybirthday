@@ -11,12 +11,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import * as THREE from "three";
 import Confetti from "react-confetti";
 
-// 3D Model Loader Component
 function FlowerModel(props) {
   const { scene } = useGLTF(process.env.PUBLIC_URL + "/flower.glb");
 
   useEffect(() => {
-    // Ensure materials are properly loaded
     scene.traverse((child) => {
       if (child.isMesh) {
         child.castShadow = true;
@@ -28,7 +26,6 @@ function FlowerModel(props) {
   return <primitive object={scene} {...props} />;
 }
 
-// Preload the model
 useGLTF.preload(process.env.PUBLIC_URL + "/flower.glb");
 
 function Scene() {
@@ -38,7 +35,6 @@ function Scene() {
   useFrame(() => {
     if (!isAnimating || !cameraRef.current) return;
 
-    // Smoothly animate camera position
     cameraRef.current.position.z = THREE.MathUtils.lerp(
       cameraRef.current.position.z,
       1.5,
@@ -50,7 +46,6 @@ function Scene() {
       0.02
     );
 
-    // Stop animation when close enough
     if (Math.abs(cameraRef.current.position.z - 1.5) < 0.01) {
       setIsAnimating(false);
     }
@@ -316,7 +311,6 @@ export default function BirthdayFlowerPot() {
               </div>
             </motion.div>
 
-            {/* Letter Modal */}
             <AnimatePresence>
               {showLetter && (
                 <motion.div
@@ -385,8 +379,8 @@ export default function BirthdayFlowerPot() {
                         overflowY: "auto",
                         flex: 1,
                         paddingRight: "20px",
-                        marginRight: "-20px", // Compensate for padding
-                        // Customize scrollbar
+                        marginRight: "-20px",
+
                         scrollbarWidth: "thin",
                         scrollbarColor: "#FF69B4 #f0f0f0",
                       }}
@@ -428,22 +422,44 @@ export default function BirthdayFlowerPot() {
                             textShadow: "1px 1px 1px rgba(0,0,0,0.05)",
                           }}
                         >
-                          Hi Ananya. Happy 21st Birthday. I realllllllly wish I
-                          was celebrating with you and can't believe I am
-                          missing this. The last time I wrote a letter on your
-                          birthday it was for your 19th birthday and even though
-                          our relationship was in an akward phase, I still saw
-                          you as my best friend and felt inside in a way I had
-                          never about another person. Up to that point, I had
-                          never met someome that put a smile so wide on my
-                          phase. Really looking back at it, while I was writing
-                          that letter, it was the moment where I really felt I
-                          was so in love. A feeling in my heart emerged that I
-                          never felt before. Honeslty throughout our first year,
-                          I was very scared of our future particuarly thinking
-                          what if me and you just ended up as strangers.
-                          Everytime I thought of that I would just feel so sick
-                          inside hoping that I would never be in that type of
+                          Hi Ananya. Happy 21st Birthday my love. I realllllllly
+                          wish I was celebrating with you in Singapore and can't
+                          believe I am missing this. I miss my beautiful
+                          girlfriend. There is not a single person in the world
+                          like you. I miss your glowing and soft skin. Your
+                          beautiful curly hair. Your precious and calm voice and
+                          your funny jokes that make me laught non stop. I miss
+                          the flowerly scent I would smell on your neck and
+                          chest everytime we would cuddle. I miss seeing you
+                          from a distance and walking towards each other and
+                          having the biggest excitement ever to meet you. I wish
+                          I could hug you right now holding your gorgeous self.
+                          Everytime I hold you, I instantly feel this hot
+                          adrenaline inside going through everywhere single
+                          time. I have loved every single part of this
+                          relationship. I know we have had a lot of downs, but I
+                          feel like everytime we go down, we come back stronger.
+                          I just have so many favorite moments of us that
+                          everytime I try to think, more and more pop up.
+                          Whether it was the first time me and you talked in our
+                          room or the NLE concert or midsummers or the time we
+                          went to Tiki Tai on a date or both of your previous
+                          birthdays or the last good bye I had before you left,
+                          every moment with you has been nothing but perfect.
+                          The last time I wrote a letter on your birthday it was
+                          for your 19th birthday and even though our
+                          relationship was in an akward phase, I still saw you
+                          as my best friend and felt inside in a way I had never
+                          about another person. Up to that point, I had never
+                          met someome that put a smile so wide on my phase.
+                          Really looking back at it, while I was writing that
+                          letter, it was the moment where I really felt I was so
+                          in love. A feeling in my heart emerged that I never
+                          felt before. Honeslty throughout our first year, I was
+                          very scared of our future particuarly thinking what if
+                          me and you just ended up as strangers. Everytime I
+                          thought of that I would just feel so sick inside
+                          hoping that I would never be in that type of
                           situation. Now I am writing this knowing you are my
                           soul mate and the love of my life. I picture us
                           graduating together. I picture us going on a vacation
@@ -451,10 +467,10 @@ export default function BirthdayFlowerPot() {
                           others work. I picture us moving in together or
                           hopefully being very close by after we gradute. I
                           picture us making new friends together. I picture us
-                          marrying , buying our own house, going on family
+                          marrying, buying our own house, going on family
                           vacation, test driving a car, and growing old
                           together. I was alwasy excited about life, but never
-                          like this, knowing I will be going with it with my
+                          like this, knowing I will exploring it with my
                           bestfriend, my other half, my love. I just think of
                           all of the fun things and adventures we are going to
                           do. I imagine us traveling and building the most
@@ -469,31 +485,47 @@ export default function BirthdayFlowerPot() {
                           is for you to be happy. The only thing that I want is
                           for you to enjoy every second of my life. I still
                           can't beleive you are 21. It literally feels like
-                          yesterday that I met you on the side of Mccormick. I
-                          can't even imagine how my life would be if maybe we
-                          never met or if we never became close. You have
-                          literally built me into the person I am today. You
-                          make me feel so confident and make me feel like I am
-                          the only guy in the whole world. You asked about how I
-                          got more mature throughout the years and the truth is,
-                          all that is the influence you give on me. I can say
-                          out of all of my friends, you influence and make me
-                          into the best possible person I can be. I would be a
-                          completely differnet person if it weren't for you. Who
-                          knows I might still be pre - med hehe. Happy Birthday
-                          again Ananya! I want you to wish for you to accomplish
+                          yesterday that I met you on the side of Mccormick
+                          seeing your extremely cute smile for the first time
+                          and instanlty thinking "WOW she is CUTE". I can't even
+                          imagine how my life would be if maybe we never met or
+                          if we never became close. You have literally built me
+                          into the person I am today. You make me feel so
+                          confident and make me feel like I am the only guy in
+                          the whole world. You asked about how I got more mature
+                          throughout the years and the truth is, all that is the
+                          influence you give on me. I can say out of all of my
+                          friends, you influence and make me into the best
+                          possible person I can be. I would be a completely
+                          differnet person if it weren't for you. Who knows I
+                          might still be pre - med hehe. Happy Birthday again
+                          Ananya! I want you to wish for you to accomplish
                           anything in life that you want and for you to have a
                           smile on your face forever. After you birthday party
                           you told me how you really felt that life is great and
                           I hope that every single day in your future is like
-                          that. I know I make a lot of mistakes in this
-                          relationship and there are moments that I know I
-                          should have been better. I really am trying to learn
-                          and be the best possible boyfriend, partner, and make
-                          you the happiest person in the world. I love you
-                          Ananya. I just really wanted you to have a letter that
-                          you could keep forever and see anytime so that is why
-                          I created this website. I hope you like it!
+                          that. I really miss you and really can not wait till
+                          your back. I miss the late night conversations we used
+                          to have. Ever since first year we can literally be up
+                          till 4 or 5 am just talking. I remeber we used to go
+                          to our 8 am regression 4 hours of sleep because we
+                          would stay up so late. I miss us cuddling on bed non
+                          stop forever. I miss the tension between us when we
+                          would be in our room where we both knew what was about
+                          to happen but would just always try to make it seem so
+                          natural. I miss when the lights are off, blank on top,
+                          and everything off at 2 am where I just feel like my
+                          heart is burning out of pure love. I miss just the
+                          staring into each other eyes, where there is no
+                          talking just feeling the love. I know I make a lot of
+                          mistakes in this relationship and there are moments
+                          that I know I should have been better. I really am
+                          trying to learn and be the best possible boyfriend,
+                          partner, and make you the happiest person in the
+                          world. I love you Ananya. I just really wanted you to
+                          have a letter that you could keep forever and see
+                          anytime so that is why I created this website. I hope
+                          you like it!
                         </p>
                         {/* Add more paragraphs here and they'll be scrollable */}
                       </div>
