@@ -246,29 +246,6 @@ export default function BirthdayFlowerPot() {
               <Scene />
             </Canvas>
 
-            {/* Click & Hold Instructions */}
-            <div
-              style={{
-                position: "absolute",
-                bottom: "50%", // Center vertically
-                right: "20px", // Position on the right side
-                transform: "translateY(50%)", // Center vertically
-                color: "#ffffff", // Changed to white for better visibility on purple background
-                textAlign: "center",
-                fontFamily: "Arial, sans-serif",
-                userSelect: "none",
-                zIndex: 10,
-                padding: "15px",
-                background: "rgba(0,0,0,0.2)", // Semi-transparent background
-                borderRadius: "10px",
-              }}
-            >
-              <div style={{ fontSize: "20px", marginBottom: "4px" }}>
-                click & hold
-              </div>
-              <div style={{ fontSize: "16px" }}>to rotate</div>
-            </div>
-
             {/* Letter Icon */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -441,7 +418,27 @@ export default function BirthdayFlowerPot() {
                           for me honestly. This is the first time I feel lonely
                           in my life even though I am surrounded with so many
                           people all the time. The only thing that gets me
-                          through is seeing or hearing your voice.
+                          through is seeing or hearing your voice. I can't tell
+                          you how excited I am to see you back. However, seeing
+                          you smile in your birthday video made me feel so
+                          happy. The only thing I want in this world is for you
+                          to be happy. The only thing that I want is for you to
+                          enjoy every second of my life. I still can't beleive
+                          you are 21. It literally feels like yesterday that I
+                          met you on the side of Mccormick. I can't even imagine
+                          how my life would be if maybe we never met or if we
+                          never became close. You have literally built me into
+                          the person I am today. You make me feel so confident
+                          and make me feel like I am the only guy in the whole
+                          world. You asked about how feel I got more mature
+                          throughout the years and the truth is lot of that is
+                          the influence you give on me. I can say out of all of
+                          my friends, you influence and make me into the best
+                          possible person I can be. I would be a completely
+                          differnet person if it weren't for you. Who knows I
+                          might still be pre - med hehe. Well enough of my yap,
+                          I just really wanted you to have a letter that you
+                          could keep forever and see anytime that you want.
                         </p>
                         {/* Add more paragraphs here and they'll be scrollable */}
                       </div>
