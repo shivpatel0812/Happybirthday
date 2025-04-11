@@ -395,50 +395,69 @@ export default function BirthdayFlowerPot() {
                           Hi Ananya. Happy 21st Birthday. I realllllllly wish I
                           was celebrating with you and can't believe I am
                           missing this. The last time I wrote a letter on your
-                          birthday it was for your 19th birthday and honestly
-                          then I saw you as my best friend and really saw more
-                          than that. Up to that point, I had never met someome
-                          that made my smile be so wide on my face everytime I
-                          saw you. Honeslty, I was very scared of our future
-                          then just thinking of if I would ever have to go a day
-                          where me and you are just strangers. Now I am writing
-                          this knowing you are my soul mate and the love of my
-                          life. I picture us graduating together. I picture us
-                          going on a vacation after we finish school. I picture
-                          us visiting each others work. I picture us moving in
-                          together or hopefully being very close by after we
-                          gradute. I picture us making new friends together. I
-                          picture us marrying I picture us marrying, buying our
-                          own house, going on family vacation and growing old
+                          birthday it was for your 19th birthday and even though
+                          our relationship was in an akward phase, I still saw
+                          you as my best friend and felt inside in a way I had
+                          never about another person. Up to that point, I had
+                          never met someome that put a smile so wide on my
+                          phase. Really looking back at it, while I was writing
+                          that letter, it was the moment where I really felt I
+                          was so in love. A feeling in my heart emerged that I
+                          never felt before. Honeslty throughout our first year,
+                          I was very scared of our future particuarly thinking
+                          what if me and you just ended up as strangers.
+                          Everytime I thought of that I would just feel so sick
+                          inside hoping that I would never be in that type of
+                          situation. Now I am writing this knowing you are my
+                          soul mate and the love of my life. I picture us
+                          graduating together. I picture us going on a vacation
+                          after we finish school. I picture us visiting each
+                          others work. I picture us moving in together or
+                          hopefully being very close by after we gradute. I
+                          picture us making new friends together. I picture us
+                          marrying , buying our own house, going on family
+                          vacation, test driving a car, and growing old
                           together. I was alwasy excited about life, but never
                           like this, knowing I will be going with it with my
-                          bestfriend, my other half to go on an adventure with.
-                          I just think of all of the fun things that we are
-                          going to do. These last 4 months have been really hard
-                          for me honestly. This is the first time I feel lonely
-                          in my life even though I am surrounded with so many
-                          people all the time. The only thing that gets me
-                          through is seeing or hearing your voice. I can't tell
-                          you how excited I am to see you back. However, seeing
-                          you smile in your birthday video made me feel so
-                          happy. The only thing I want in this world is for you
-                          to be happy. The only thing that I want is for you to
-                          enjoy every second of my life. I still can't beleive
-                          you are 21. It literally feels like yesterday that I
-                          met you on the side of Mccormick. I can't even imagine
-                          how my life would be if maybe we never met or if we
-                          never became close. You have literally built me into
-                          the person I am today. You make me feel so confident
-                          and make me feel like I am the only guy in the whole
-                          world. You asked about how feel I got more mature
-                          throughout the years and the truth is lot of that is
-                          the influence you give on me. I can say out of all of
-                          my friends, you influence and make me into the best
-                          possible person I can be. I would be a completely
-                          differnet person if it weren't for you. Who knows I
-                          might still be pre - med hehe. Well enough of my yap,
-                          I just really wanted you to have a letter that you
-                          could keep forever and see anytime that you want.
+                          bestfriend, my other half, my love. I just think of
+                          all of the fun things and adventures we are going to
+                          do. I imagine us traveling and building the most
+                          unquie experiences. These last 4 months have been
+                          really hard for me honestly. This is the first time I
+                          feel lonely in my life even though I am surrounded
+                          with so many people all the time. The only thing that
+                          gets me through is seeing or hearing your voice. I
+                          can't tell you how excited I am to see you back.
+                          However, seeing you smile in your birthday video made
+                          me feel so happy. The only thing I want in this world
+                          is for you to be happy. The only thing that I want is
+                          for you to enjoy every second of my life. I still
+                          can't beleive you are 21. It literally feels like
+                          yesterday that I met you on the side of Mccormick. I
+                          can't even imagine how my life would be if maybe we
+                          never met or if we never became close. You have
+                          literally built me into the person I am today. You
+                          make me feel so confident and make me feel like I am
+                          the only guy in the whole world. You asked about how I
+                          got more mature throughout the years and the truth is,
+                          all that is the influence you give on me. I can say
+                          out of all of my friends, you influence and make me
+                          into the best possible person I can be. I would be a
+                          completely differnet person if it weren't for you. Who
+                          knows I might still be pre - med hehe. Happy Birthday
+                          again Ananya! I want you to wish for you to accomplish
+                          anything in life that you want and for you to have a
+                          smile on your face forever. After you birthday party
+                          you told me how you really felt that life is great and
+                          I hope that every single day in your future is like
+                          that. I know I make a lot of mistakes in this
+                          relationship and there are moments that I know I
+                          should have been better. I really am trying to learn
+                          and be the best possible boyfriend, partner, and make
+                          you the happiest person in the world. I love you
+                          Ananya. I just really wanted you to have a letter that
+                          you could keep forever and see anytime so that is why
+                          I created this website. I hope you like it
                         </p>
                         {/* Add more paragraphs here and they'll be scrollable */}
                       </div>
